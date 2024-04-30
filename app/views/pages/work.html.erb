@@ -1,0 +1,31 @@
+<nav>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About", about_path %>
+    <%= link_to "Work", work_path %>
+    <%= link_to "Contact", contact_path %>
+</nav>
+<h1>Portfolio</h1>
+<div class="projects">
+    <% 3.times do %>
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="Project Image">
+            <h3>Project Title</h3>
+            <p>Project Description</p>
+        </div>
+    <% end %>
+</div>
+
+<style>
+    .projects {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .project {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+</style>
