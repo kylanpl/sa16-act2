@@ -1,0 +1,535 @@
+Started GET "/" for 127.0.0.1 at 2024-04-30 02:12:19 -0500
+  
+ActiveRecord::NoDatabaseError (We could not find your database: sa16_act2_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.8.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8.1) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8.1) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8.1) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8.1) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8.1) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8.1) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8.1) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8.1) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sa16_act2_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sa16_act2_test"[0m
+  [1m[35m (251.9ms)[0m  [1m[35mCREATE DATABASE "sa16_act2_development" ENCODING = 'unicode'[0m
+  [1m[35m (218.7ms)[0m  [1m[35mCREATE DATABASE "sa16_act2_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8774160787876908060)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-04-30 07:12:30.806028"], ["updated_at", "2024-04-30 07:12:30.806028"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8774160787876908060)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-04-30 02:12:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 338)
+  Rendered layout layouts/application.html.erb (Duration: 227.7ms | Allocations: 87551)
+Completed 200 OK in 236ms (Views: 230.6ms | ActiveRecord: 0.0ms | Allocations: 92136)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:13:19 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2362)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3336)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:13:23 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.4ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1851)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2195)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:13:29 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2340)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3259)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:13:39 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2345)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3284)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:16:48 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2360)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3293)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:16:58 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2351)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3284)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:02 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.4ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2387)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3320)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:12 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2345)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3278)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:17 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2372)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3305)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:22 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2348)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 3281)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:35 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2355)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3288)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:38 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2356)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3289)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:49 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2388)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3321)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:17:52 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2370)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3303)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:18:02 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2361)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 3294)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:19:09 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.8ms | Allocations: 994)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3172)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 4105)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:19:11 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1852)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 2192)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:19:27 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 486)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2669)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3583)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:19:29 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1962)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 2249)
+
+
+Started GET "/" for 127.0.0.1 at 2024-04-30 02:19:29 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 377)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2111)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2431)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:19:30 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2163)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2484)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:19:30 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.6ms | Allocations: 407)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2141)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2461)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:22:47 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.7ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2625)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3542)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:22:47 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.5ms | Allocations: 323)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2061)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2401)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:22:53 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.6ms | Allocations: 442)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2617)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 3530)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:03 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.4ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2631)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 3564)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:10 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2618)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3554)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:14 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.6ms | Allocations: 442)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2614)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3547)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:20 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 442)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2632)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3565)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:25 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 440)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2633)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3566)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:36 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2626)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3559)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:42 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 440)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2603)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 3536)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:46 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2638)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 3571)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:23:58 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.6ms | Allocations: 440)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2639)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3572)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:24:07 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 440)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2627)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3560)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:24:12 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2617)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 3550)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:24:33 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2551)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3486)
+
+
+Started GET "/" for 127.0.0.1 at 2024-04-30 02:24:33 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2024)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 2364)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:24:34 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1862)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 2129)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:24:34 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2104)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2424)
+
+
+Started GET "/" for 127.0.0.1 at 2024-04-30 02:24:36 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1856)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 2123)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:24:36 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1865)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 2132)
+
+
+Started GET "/" for 127.0.0.1 at 2024-04-30 02:25:27 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2545)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 3458)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:25:27 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2045)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2386)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:25:28 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.5ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2106)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2426)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-04-30 02:25:30 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1877)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2144)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:25:30 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1874)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 2141)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-04-30 02:25:31 -0500
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.5ms | Allocations: 323)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2069)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2389)
+
+
+Started GET "/work" for 127.0.0.1 at 2024-04-30 02:25:32 -0500
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  Rendered pages/work.html.erb within layouts/application (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1860)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 2127)
+
+
